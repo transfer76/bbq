@@ -1,8 +1,10 @@
 <% errors = model.errors %>
 
 <% if errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <div class="alert alert-danger">
+    <div class="lead buffer-bottom">
+      В вашей форме <%= errors.count %> ошибок
+    </div>
 
     <ul>
       <% errors.full_messages.each do |message| %>
