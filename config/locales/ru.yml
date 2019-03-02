@@ -20,11 +20,14 @@ ru:
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие'
     users: 
-      updated: 'Выобновили свой профиль'
+      updated: 'Вы обновили свой профиль'
   app:
     name: 'Шашлыки'
     company: 'Будущий программист'    
   errors:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
-    many: '%{count} ошибок'    
+    many: '%{count} ошибок'
+  notice:
+    event:
+      destroy: 'Вы точно хотите удалить ивент?'

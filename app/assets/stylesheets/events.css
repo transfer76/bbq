@@ -3,6 +3,10 @@
 Наши дополнительные стили для красивого оформления плитки событий
  */
 
+.action {
+  margin: 1em 0;
+}
+
 .event-info {
   position: relative;
   color: white;
