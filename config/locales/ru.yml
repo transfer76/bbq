@@ -31,3 +31,7 @@ ru:
   notice:
     event:
       destroy: 'Вы точно хотите удалить ивент?'
+  sign_up:
+      registration: 'Зарегистрироваться'
+  log_in:
+      in: 'Войти'
