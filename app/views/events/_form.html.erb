@@ -26,6 +26,6 @@
   </div>
 
   <div class="action">
-    <%= link_to 'Удалить', event_path(@event), class: "btn btn-danger", method: :delete, data:  { confirm: I18n.t('notice.event.destroy') } %>
+    <%= link_to 'Удалить', events_path(@event), class: "btn btn-danger", method: :delete, data:  { confirm: I18n.t('notice.event.destroy') } %>
   </div>
 <% end %>  
