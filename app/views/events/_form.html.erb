@@ -24,8 +24,4 @@
   <div class="action">
     <%= f.submit 'Сохранить', class: 'btn btn-primary' %> или <%= link_to 'вернуться', :back %>
   </div>
-
-  <div class="action">
-    <%= link_to 'Удалить', events_path(@event), class: "btn btn-danger", method: :delete, data:  { confirm: I18n.t('notice.event.destroy') } %>
-  </div>
 <% end %>  
