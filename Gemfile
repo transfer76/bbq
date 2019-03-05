@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'rails-ujs'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'rmagick'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
