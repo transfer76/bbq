@@ -1,0 +1,12 @@
+<%= t '.title' %>
+_______
+
+<%= @comment.body %>
+
+<%= t '.author' %>: <%= @comment.user_name %>
+
+__________________________________________
+<%= t '.event' %>: <%= @event.title %>
+<%= t '.datetime' %>: <%= l @event.datetime %>
+<%= t '.owner' %>: <%= @event.user.name %>
+
