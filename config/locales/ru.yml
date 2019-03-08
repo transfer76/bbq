@@ -12,6 +12,8 @@ ru:
         name: 'Имя'
         avatar: 'Аватарка'
         password: 'Пароль'
+        password_new: 'Новый пароль'
+        confirm_new_password: 'Подтвердите новый пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
         title: 'Название'
@@ -82,6 +84,15 @@ ru:
     event:
       destroy: 'Вы точно хотите удалить ивент?'
   sign_up:
-      registration: 'Зарегистрироваться'
+    registration: 'Зарегистрироваться'
+  edit:
+    registration: 'Редактирование данных'
+    delete: 'Вы уверены, что хотите удалить аккаунт?'
+    del_account: 'Удалить аккаунт'
+    password: 'Оставьте поле пустым, если не меняете пароль'
+    confirm: 'Необходим текущий пароль, чтобы подтвердить изменения'
+  password:
+    forgot: 'Забыли пароль?'
+    change: 'Изменить пароль'
   log_in:
-      in: 'Войти'
+    in: 'Войти'
