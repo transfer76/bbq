@@ -14,4 +14,13 @@ class EventMailer < ApplicationMailer
     
     mail to: email, subject: "Новый комментарий @ #{event.title}"
   end
+
+  def photo(event, photo, email)
+    @photo = photo
+    @event = event
+
+    attachments[@photo.photo.thumb.file.filename] = File.read(@photo.photo.thumb.file.file)
+
+    mail to: email, subject: "Новое фото @ #{event.title}"
+  end
 end

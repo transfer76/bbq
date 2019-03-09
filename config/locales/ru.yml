@@ -49,7 +49,6 @@ ru:
       created: 'Вы добавили фотографию к событию'
       destroyed: 'Вы удалили фотографию'  
 
-
   app:
     name: 'Шашлыки'
     company: 'Будущий программист'    
@@ -57,6 +56,10 @@ ru:
   comments:
     comment:
       destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+
+  photos:
+    photo:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту фотографию?'
 
   subscriptions:
     subscription:
@@ -76,6 +79,12 @@ ru:
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
+      owner: 'Организатор'
+    photo:
+      title: 'Новое фото'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Время события'
       owner: 'Организатор'
 
   errors:
