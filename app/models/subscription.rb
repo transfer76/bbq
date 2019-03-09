@@ -8,7 +8,7 @@ class Subscription < ApplicationRecord
 
   validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
   validates :user_email, uniqueness: { scope: :event_id }, unless: -> { user.present? }
-
+  validate :user_email_present?
 
   def user_name
     if user.present?
@@ -24,5 +24,9 @@ class Subscription < ApplicationRecord
     else
       super
     end
+  end
+
+  def user_email_present?
+    errors.messages[:user_email] << 'уже существует' if User.where(email: user_email).present?
   end
 end
