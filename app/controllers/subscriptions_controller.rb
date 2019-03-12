@@ -8,7 +8,6 @@ class SubscriptionsController < ApplicationController
 
     if @event.user == current_user
       redirect_to @event, alert: I18n.t('controllers.subscription.user_error')
-
     elsif @new_subscription.save
       EventMailer.subscription(@event, @new_subscription).deliver_now
 
@@ -18,27 +17,27 @@ class SubscriptionsController < ApplicationController
     end
   end
 
- def destroy
-   message = {notice: I18n.t('controllers.subscription.destroyed')}
-   
+  def destroy
+    message = { notice: I18n.t('controllers.subscription.destroyed') }
+
    if current_user_can_edit?(@subscription)
      @subscription.destroy
-   else 
-     message = {alert: I18n.t('controllers.subscription.error')}
-   end  
+   else
+     message = { alert: I18n.t('controllers.subscription.error') }
+   end
    redirect_to @event, message
   end
 
   private
-    def set_subscription
-      @subscription = @event.subscriptions.find(params[:id])
-    end
+  def set_subscription
+    @subscription = @event.subscriptions.find(params[:id])
+  end
 
-    def set_event
-      @event = Event.find(params[:event_id])
-    end  
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
-    def subscription_params
-      params.fetch(:subscription, {}).permit(:user_email, :user_name)
-    end
+  def subscription_params
+    params.fetch(:subscription, {}).permit(:user_email, :user_name)
+  end
 end
