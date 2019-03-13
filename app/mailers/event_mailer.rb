@@ -18,7 +18,7 @@ class EventMailer < ApplicationMailer
   def photo(event, photo, email)
     @photo = photo
     @event = event
-    @url = "https://visitbbq.herokuapp.com/event/#{photo.photo.url}"
+    @url = "#{photo.photo.url}"
 
     mail to: email, subject: "Новое фото @ #{event.title}"
   end
