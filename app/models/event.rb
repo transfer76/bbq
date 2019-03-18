@@ -16,4 +16,8 @@ class Event < ApplicationRecord
   def visitors
     (subscribers + [user]).uniq
   end
+
+  def pincode_valide?(pin2chek)
+    pincode == pin2chek
+  end  
 end
