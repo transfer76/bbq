@@ -40,6 +40,10 @@
   color: #d0d0ff;
 }
 
+.event-description h1 {
+    font-size: 50px;
+}
+
 .event-description small {
   color: #e0e0e0;
 }
