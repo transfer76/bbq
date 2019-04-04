@@ -1,8 +1,3 @@
-/*
-(с) goodprogrammer.ru
-Наши дополнительные стили для красивого оформления плитки событий
- */
-
 .action {
   margin: 1em 0;
 }
@@ -54,4 +49,10 @@
 
 .event-map {
   margin: 10px 0;
+}
+
+.event-photo-line {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
 }

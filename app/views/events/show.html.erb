@@ -34,12 +34,15 @@
     </div>
   </div>
 
+  <div class="event-photos-gallery row">
+    <div class="event-photo-line">
+      <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-8">
-      <div class="events-photos">
-        <div class="event-photos-gallery">
-          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-        </div>
+      <div class="event-photos">
 
         <% if current_user.present? %>
           <div class="event-photo-form">
