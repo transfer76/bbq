@@ -4,7 +4,7 @@
             method: :delete, data: {confirm: t('.destroy_confirm')}) %>
 
   <% if current_user_can_edit?(photo) %>
-  <% image_title += photo_delete %>
+    <% image_title += photo_delete %>
   <% end %>
 
   <div class="event-photo buffer-both">

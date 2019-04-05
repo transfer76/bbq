@@ -54,5 +54,8 @@
 .event-photo-line {
     display: flex;
     flex-direction: row;
-    margin-right: 10px;
+}
+
+.event-photo + .event-photo {
+    margin-left: 15px;
 }
