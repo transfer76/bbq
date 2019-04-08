@@ -31,3 +31,6 @@
 /config/master.key
 .idea
 public/uploads
+
+config/database.yml
+config/credentials.yml.enc
