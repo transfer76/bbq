@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rails-ujs'
 gem 'jquery-rails'
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', '~> 3.0.0'
 gem 'fog-aws'
 gem 'bootsnap', '>= 1.1.0', require: false
 
