@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'rmagick', '~> 3.0.0'
 gem 'fog-aws'
+gem 'pundit', '~> 2.0.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
