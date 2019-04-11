@@ -26,6 +26,14 @@ end
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3', '~>1.3.6'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
