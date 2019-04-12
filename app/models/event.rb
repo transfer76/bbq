@@ -1,11 +1,11 @@
 class Event < ApplicationRecord
 
-  belongs_to :user, optional: true
+  belongs_to :user
 
   has_many :comments, dependent: :destroy
-  has_many :subscriptions
+  has_many :subscriptions, dependent: :destroy
   has_many :subscribers, through: :subscriptions, source: :user
-  has_many :photos
+  has_many :photos, dependent: :destroy
 
   validates :user, presence: true
 
@@ -19,5 +19,5 @@ class Event < ApplicationRecord
 
   def pincode_valide?(pin2chek)
     pincode == pin2chek
-  end  
+  end
 end

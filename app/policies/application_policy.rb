@@ -2,6 +2,8 @@ class ApplicationPolicy
   attr_reader :user, :record
 
   def initialize(user, record)
+    raise Pundit::NotAuthorizedError, notice: I18n.t('pundit.logged_in') unless user
+
     @user = user
     @record = record
   end
