@@ -1,6 +1,6 @@
 class EventPolicy < ApplicationPolicy
   def show?
-    update?
+    true
   end
 
   def edit?
