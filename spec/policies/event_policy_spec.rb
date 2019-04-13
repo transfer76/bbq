@@ -1,27 +1,28 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe EventPolicy, type: :policy do
   let(:user) { User.new }
 
   subject { described_class }
 
-  permissions ".scope" do
-    pending "add some examples to (or delete) #{__FILE__}"
+  context "When user is not logged" do
+    permissions :edit?, :update?, :destroy? do
+      it { is_expected.not_to permit(user, Event) }
+    end
+
+    permissions :show? do
+      it { is_expected. to permit(user, Event) }
+    end
   end
 
-  permissions :show? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
+  context "When user is logged" do
+    let(:event) { user.events.build }
+    permissions :edit?, :update?, :destroy? do
+      it { is_expected.to permit(user, event) }
+    end
 
-  permissions :create? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :update? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :destroy? do
-    pending "add some examples to (or delete) #{__FILE__}"
+    permissions :show? do
+      it { is_expected .to permit(user, event) }
+    end
   end
 end
