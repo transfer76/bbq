@@ -17,12 +17,13 @@ RSpec.describe EventPolicy, type: :policy do
 
   context "When user is logged" do
     let(:event) { user.events.build }
+
     permissions :edit?, :update?, :destroy? do
       it { is_expected.to permit(user, event) }
     end
 
     permissions :show? do
-      it { is_expected .to permit(user, event) }
+      it { is_expected.to permit(user, event) }
     end
   end
 end
