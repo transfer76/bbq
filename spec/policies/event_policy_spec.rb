@@ -18,11 +18,11 @@ RSpec.describe EventPolicy, type: :policy do
 
   context "When user is not owner of event" do
     permissions :edit?, :update?, :destroy? do
-      it { is_expected.not_to permit(nil, event) }
+      it { is_expected.not_to permit(user, Event) }
     end
 
     permissions :show? do
-      it { is_expected.to permit(nil, event) }
+      it { is_expected.to permit(user, Event) }
     end
   end
 
