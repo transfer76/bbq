@@ -18,6 +18,9 @@ gem 'rmagick', '~> 3.0.0'
 gem 'fog-aws'
 gem 'pundit', '~> 2.0.0'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'resque', '~> 1.27.4'
+gem 'capistrano', '~> 3.11.0'
+gem 'capistrano-resque', '~> 0.2.3', require: false
 
 group :production do
   gem 'pg'
@@ -41,4 +44,5 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
 end
