@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'visitbbq.herokuapp.com'
+  default from: 'visitbbq.top'
   layout 'mailer'
 end
