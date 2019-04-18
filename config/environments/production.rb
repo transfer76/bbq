@@ -103,10 +103,10 @@ Rails.application.configure do
   ActionMailer::Base.delivery_method = :sendmail
   ActionMailer::Base.default charset: "utf-8"
 
-  ActionMailer::Base.sendmail_settings = {
-      location: "/usr/sbin/sendmail",
-      arguments: '-i -t'
-  }
+  # ActionMailer::Base.sendmail_settings = {
+  #     location: "/usr/sbin/sendmail",
+  #     arguments: '-i -t'
+  # }
 
   # ActionMailer::Base.smtp_settings = {
   #   :address        => 'smtp.sendgrid.net',
