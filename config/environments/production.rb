@@ -99,7 +99,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'visitbbq.top' }
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :sendmail
+
+  ActionMailer::Base.delivery_method = :sendmail
+  ActionMailer::Base.default charset: "utf-8"
+
+  ActionMailer::Base.sendmail_settings = {
+      location: "/usr/sbin/sendmail",
+      arguments: '-i -t'
+  }
 
   # ActionMailer::Base.smtp_settings = {
   #   :address        => 'smtp.sendgrid.net',
