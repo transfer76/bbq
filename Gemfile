@@ -19,6 +19,8 @@ gem 'fog-aws'
 gem 'pundit', '~> 2.0.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'resque', '~> 1.27.4'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'pg'
