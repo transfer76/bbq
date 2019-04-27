@@ -1,24 +1,54 @@
-# README
+## bbq 
+Another name of app is Barbeque.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+This app was created in training course, where after registration you can create yours own events, attach photos, make comments, restrict access with pincode. You can watch any other events, comment them, attach photo, subscribe to them. Subscribe and comments without registration is possible also.
 
-Things you may want to cover:
+Authentication with gem pundit
 
-* Ruby version
+Uploading photo with gems carrierwave, rmagick. For comfortable viewing photo is using light box
 
-* System dependencies
+Subscribers receive email letter using postfix
 
-* Configuration
+Event places are displayed on the Yandex map
 
-* Database creation
+For store photo is using cloud servise AWS with bucket S3
 
-* Database initialization
+App is deployed to server Digital Ocean
 
-* How to run the test suite
+### Launch
+1. Download or clone ropository
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Use your own credentials as in examples
+```
+$ cp config/database.yml.example config/database.yml
+$ cp config/secrets.yml.example config/secrets.yml
+$ cp .env.example .env
+```
+3. Use bundle
+```
+$ bundle
+```
 
-* Deployment instructions
+4. Create Data Base
+```
+$ bundle exec rails db:create
+```
+5. Run database migrations
+```
+$ bundle exec rails db:migrate
+```
+6. To populate database with seed data run
+```
+$ bundle exec rails db:seed
+```
+### Deploy
+**bbq app** can be deploying to Heroku. 
 
-* ...
+For correct work on Heroku URL must be changed in **config/environments/production.rb**
+Also must be changed configuration fo mailing SendGrid
+
+### Demo Heroku
+
+http://https://visitbbq.herokuapp.com/
+
