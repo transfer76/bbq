@@ -4,6 +4,10 @@ Another name of app is Barbeque.
 ### Description
 This app was created in training course, where after registration you can create yours own events, attach photos, make comments, restrict access with pincode. You can watch any other events, comment them, attach photo, subscribe to them. Subscribe and comments without registration is possible also.
 
+Language: Ruby, version: 2.5.3
+
+Rails: 5.2.2
+
 Authentication with gem pundit
 
 Uploading photo with gems carrierwave, rmagick. For comfortable viewing photo is using light box
@@ -42,6 +46,11 @@ $ bundle exec rails db:migrate
 ```
 $ bundle exec rails db:seed
 ```
+7. For correct load photo install system utility ImageMagic
+```
+$ sudo aptitude install imagemagick libmagickwand-dev
+```
+
 ### Deploy
 **bbq app** can be deploying to Heroku. 
 
